@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from rest_framework import viewsets, routers
-from .views import PersonViewSet, OrganizationViewSet
+from .views import PersonViewSet, OrganizationViewSet, MembershipViewSet, PostViewSet
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -10,6 +10,8 @@ admin.autodiscover()
 router = routers.DefaultRouter()
 router.register(r'persons', PersonViewSet)
 router.register(r'organizations', OrganizationViewSet)
+router.register(r'memberships', MembershipViewSet)
+router.register(r'posts', PostViewSet)
 
 
 urlpatterns = patterns('',

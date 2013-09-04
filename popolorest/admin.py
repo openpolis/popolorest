@@ -1,5 +1,5 @@
 from django.contrib import admin
-from popolo.models import Person, Organization
+from popolo.models import Person, Organization, Membership, Post
 
 
 class PersonAdmin(admin.ModelAdmin):
@@ -7,3 +7,5 @@ class PersonAdmin(admin.ModelAdmin):
 
 admin.site.register(Person)
 admin.site.register(Organization)
+admin.site.register(Membership)
+admin.site.register(Post)
